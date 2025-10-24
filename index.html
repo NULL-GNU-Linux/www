@@ -1,1 +1,345 @@
-under construction!
+<!DOCTYPE html>
+<!-- anybody reading this, im sorry i put everything in one file lmao.
+- neo
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NULL GNU/Linux | Everything is your choice.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            border-bottom: 3px solid #fff;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: -2px;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            margin-top: 5px;
+            opacity: 0.8;
+        }
+
+        nav {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            padding: 5px 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            border: 2px solid #fff;
+        }
+
+        .hero {
+            padding: 120px 0;
+            text-align: center;
+            border-bottom: 3px solid #fff;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            letter-spacing: -3px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 3px solid #fff;
+        }
+
+        .cta-button:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        .features {
+            padding: 100px 0;
+            border-bottom: 3px solid #fff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-box {
+            border: 3px solid #fff;
+            padding: 40px;
+            transition: all 0.3s;
+        }
+
+        .feature-box:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .feature-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .philosophy {
+            padding: 100px 0;
+            border-bottom: 3px solid #fff;
+        }
+
+        .philosophy-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .terminal-box {
+            background: #fff;
+            color: #000;
+            padding: 30px;
+            font-family: 'Courier New', monospace;
+            border: 3px solid #fff;
+        }
+
+        .terminal-box::before {
+            content: '$ ';
+            opacity: 0.5;
+        }
+
+        .download {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .download-options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .download-box {
+            border: 3px solid #fff;
+            padding: 40px;
+            min-width: 250px;
+            transition: all 0.3s;
+        }
+
+        .download-box:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .download-box h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .download-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            border: 2px solid #fff;
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .download-box:hover .download-link {
+            border-color: #000;
+        }
+
+        footer {
+            border-top: 3px solid #fff;
+            padding: 40px 0;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .philosophy-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .download-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav {
+                position: static;
+                transform: none;
+                margin-top: 20px;
+            }
+            
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">NULL</div>
+            <div class="tagline">GNU/Linux</div>
+            <nav>
+                <a href="#features">FEATURES</a>
+                <a href="#philosophy">PHILOSOPHY</a>
+                <a href="#download">DOWNLOAD</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>EVERYTHING IS YOUR CHOICE.</h1>
+            <p>No defaults. No compromises. Build your system from absolute zero.</p>
+            <a href="#download" class="cta-button">GET NULL</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">PURE CONTROL</h2>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h3>[ NULL INIT ]</h3>
+                    <p>No init system pre-installed. systemd? runit? OpenRC? Your choice. Start from nothing.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>[ NULL DESKTOP ]</h3>
+                    <p>No display server. No window manager. Install X11, Wayland, or live in the terminal. Zero assumptions.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>[ NULL PKGS ]</h3>
+                    <p>Every package is optional. Including but not limited to the package manager itself. Build exactly what you need, nothing more.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>[ NULL BLOAT ]</h3>
+                    <p>No telemetry, no tracking, no unnecessary daemons. Pure efficiency.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>[ NULL LIMITS ]</h3>
+                    <p>Full source access. Patch anything. Fork everything. Your system, your rules, your code.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>[ NULL COMPROMISE ]</h3>
+                    <p>Choose which packages you want from source and which binary builds. Powered by Pkglet (optional!)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy" id="philosophy">
+        <div class="container">
+            <h2 class="section-title">PHILOSOPHY</h2>
+            <div class="philosophy-content">
+                <div>
+                    <h3 style="font-size: 2rem; margin-bottom: 20px;">RADICAL MINIMALISM</h3>
+                    <p style="margin-bottom: 15px;">Most distros claim to be minimal. They lie. They ship with init systems, package managers pre-configured, default shells, and opinions baked in.</p>
+                    <p style="margin-bottom: 15px;">NULL is different. NULL gives you nothing, unless you want something. That's it. Everything else? Your decision.</p>
+                    <p>We don't assume you want bash. We don't assume you want systemd. We don't even assume you want a bootloader we chose.</p>
+                </div>
+                <div>
+                    <div class="terminal-box">
+                        choice_is_freedom() {<br>
+                        &nbsp;&nbsp;while true; do<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;make_decision<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;implement_decision<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;own_decision<br>
+                        &nbsp;&nbsp;done<br>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="download" id="download">
+        <div class="container">
+            <h2 class="section-title">GET NULL NOW</h2>
+            <p style="font-size: 1.2rem; margin-top: 20px;">Learn how to bootstrap NULL!</p>
+            <div class="download-options">
+                <div class="download-box">
+                    <h3>pkglet</h3>
+                    <p>Use pkglet to bootstrap NULL from another system.</p>
+                    <a href="https://github.com/NULL-GNU-Linux/pkglet" class="download-link">GET NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>NULL GNU/Linux © 2025 | Licensed under MIT.</p>
+            <p style="margin-top: 10px;">Everything is your choice. Even NULL itself.</p>
+        </div>
+    </footer>
+</body>
+</html>
